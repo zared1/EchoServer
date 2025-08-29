@@ -32,6 +32,32 @@ python server-for-receiving-messages.py
 
 The server will start on `localhost:8000` and wait for incoming connections.
 
+### 💬 How to Connect with `nc` (Netcat)
+
+`nc` (netcat) is a simple command-line tool to open TCP connections.
+
+#### On Linux/macOS:
+
+```bash
+nc localhost 8000
+```
+
+#### On Windows (using Ncat from Nmap):
+
+```bash
+ncat localhost 8000
+```
+
+Once connected, type any message and press **Enter** — the server will echo the message back.
+
+#### Example:
+
+```bash
+$ nc localhost 8000
+Hello server!
+Hello server!
+```
+
 ### How It Works
 
 1. The server binds to `localhost` on port `8000`.
